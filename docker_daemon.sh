@@ -1,6 +1,6 @@
 #!/bin/bash
-echo -e "Start docker minidlna"
+echo -e "Start background docker minidlna"
 
-docker run  -i -t --rm \
+docker run  -d --rm \
             -p 8200:8200/tcp \
             --name Minidlna minidlna

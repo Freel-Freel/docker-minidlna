@@ -11,6 +11,8 @@ COPY --chown=${UID}:${GID} minidlna.conf /etc
 
 USER ${UID}:${GID}
 WORKDIR /var/lib/${USER}
-CMD ["minidlnad", "-f", "/etc/minidlna.conf", "-d"]
+
+ENTRYPOINT ["/usr/sbin/minidlnad", "-f", "/etc/minidlna.conf", "-d"]
+CMD []
 
 EXPOSE 8200
